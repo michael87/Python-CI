@@ -1,0 +1,28 @@
+<form>
+	<h2>Create project</h2>
+	<article class="volume">
+		<p>
+			<label for="project_name">Project name</label>
+			<input id="project_name" type="text" name="project_name" placeholder="Add a project name" />
+		</p>
+		<p>
+			<label for="project_description">Project description</label>
+			<textarea id="project_description" name="project_description" placeholder="Add a project description"></textarea>
+		</p>
+		<p>
+			<label for="project_owner">Project owner</label>
+			<select id="project_owner" name="project_owner">
+				<option value="1">Administrator</option>
+			</select>
+		</p>
+		<p>
+			<label for="project_versioning">Project vesioning</label>
+			<select id="project_versioning" name="project_versioning">
+				<option value="svn">Subversion</option>
+				<option value="github">Github</option>
+			</select>
+		</p>
+		
+	</article>
+	<button type="submit">Create project</button>
+</form>

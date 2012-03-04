@@ -30,7 +30,9 @@ def statistics(request, project_id):
     - Cronjob: Create new results every 2,5 hours
     """
     
-    pass
+    p = 3
+    return render_to_response('projects/statistics.html', {'poll': p},
+                               context_instance=RequestContext(request))
 
 def remove(request, project_id):
     """
@@ -44,8 +46,9 @@ def remove(request, project_id):
         raise NotIntegerError('No project id found')
     
     
-    
-    pass
+    p = 3
+    return render_to_response('projects/remove.html', {'poll': p},
+                               context_instance=RequestContext(request))
     
     
 def build(request):
@@ -57,10 +60,14 @@ def build(request):
     - version
     """
     
-    pass
+    p = 3
+    return render_to_response('projects/build.html', {'poll': p},
+                               context_instance=RequestContext(request))
 
     
 def builds_overview(request):
     
-    pass 
+    p = 3
+    return render_to_response('projects/build/overview.html', {'poll': p},
+                               context_instance=RequestContext(request))
 
