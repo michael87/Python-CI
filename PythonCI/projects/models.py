@@ -27,12 +27,12 @@ class Projects(models.Model):
 	project_id = models.AutoField(primary_key=True)
 	project_name = models.CharField(_('Project name'),max_length=250)
 	project_description = models.CharField(_('Project description'),max_length=1000)
-	owner = OneToOneField('django.contrib.auth.User')
+	#owner = OneToOneField('django.contrib.auth.User')
 	date_created = models.DateTimeField(_('Date project created'))
-	date_last_modified = models.DateTimeField(_('Date last modified'))
+	date_last_modified = models.DateTimeField(_('Date last modified'), blank=False)
 	date_last_updated = models.DateTimeField(_('Date last update run'))
 	last_revision = models.IntegerField(default=0)
-	last_revision_author = OneToOneField('django.contrib.auth.User')
+	#last_revision_author = OneToOneField('django.contrib.auth.User')
 		
 		#return smart_str('%s' % (self.from_user.username))
 	#@models.permalink
@@ -41,7 +41,7 @@ class Projects(models.Model):
 	
 class Project_developers(models.Model):
 	project_developer_id = models.AutoField(primary_key=True)
-	account_id = OneToOneField('django.contrib.auth.User')
-	project_id = ManyToOneField(Projects)
+	#account_id = OneToOneField('django.contrib.auth.User')
+	#project_id = ManyToOneField(Projects)
 	date_joined = models.DateTimeField(_('Date developer joined team'))
 		
