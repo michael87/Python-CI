@@ -21,11 +21,13 @@ class PositiveTest(TestCase):
         
         self.Project = Projects(
             project_name = "test message",
-            account_id = 1,
-            language = 'nl',
-            present_languages = 'nl',
-            has_attachment = True
+            #account_id = 1,
+            #language = 'nl',
+            #present_languages = 'nl',
+            #has_attachment = True
 
         )
-        self.M.save()
+        print self.Project.save()
+        
+        
         self.assertEqual(1 + 1, 2)
