@@ -1,0 +1,17 @@
+Python CI
+=========
+
+
+
+Modules:
+--------
+* Projects
+ * Build
+ * Statistics
+ * Checkstyle
+
+* Builds
+
+
+* Versioning
+
